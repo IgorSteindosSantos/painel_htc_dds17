@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function GestaoAulas() {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <div></div>;
 }
 
-export default GestaoAulas
+export default GestaoAulas;

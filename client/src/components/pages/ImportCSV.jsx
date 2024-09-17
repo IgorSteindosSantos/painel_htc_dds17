@@ -1,12 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function ImportCSV() {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <div></div>;
 }
 
-export default ImportCSV
-
+export default ImportCSV;

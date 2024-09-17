@@ -1,12 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function GestaoUsers() {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <div></div>;
 }
 
-export default GestaoUsers
-
+export default GestaoUsers;
