@@ -1,9 +1,12 @@
 .aulas {
-    display: inline-block;
-    width: 80%;
-    vertical-align: top;
+  display: inline-block;
+  width: 80%;
+  vertical-align: top;
 }
 
+.edit {
+  width: 100%;
+}
 .tabelaAulas {
   width: 100%;
   text-align: center;
@@ -27,12 +30,17 @@
 
 .tabelaAulas td,
 .tabelaAulas th {
-  padding: 5px;
+  padding: 4px;
 }
 
-
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .aulas {
     width: 100%;
+  }
+  .tabelaAulas {
+    font-size: 15px;
+  }
+  .fim {
+    display: none;
   }
 }

@@ -1,19 +1,17 @@
 .lateral {
     display: inline-block;
     width: 20%;
-}
-
-.lateral img {
+  }
+  .lateral img {
     max-width: 100%;
-}
-
-.lateral div {
+  }
+  .lateral div {
     padding: 0 8px;
     padding-bottom: 4px;
-}
-
-@media(max-width: 768px) {
-    .lateral {
-        display: none;
+  }
+  
+  @media(max-width:768px){
+    .lateral{
+      display: none;
     }
-}
+  }

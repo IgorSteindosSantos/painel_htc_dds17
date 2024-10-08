@@ -1,22 +1,30 @@
-import styles from './Navbar.module.css'
+import styles from './Navbar.module.css';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <div className='bg-primary'>
-      <nav className={`container navbar navbar-expand ${styles.barra_navegacao}`}>
+    <div className="bg-primary">
+      <nav
+        className={`container navbar navbar-expand ${styles.barra_navegacao}`}
+      >
         <div>
-          <span className='navbar-brand'>Nome Usuário</span>
+          <span className="navbar-brand">Nome Usuário</span>
         </div>
-        <ul className='navbar-nav ms-auto'>
-          <li className='nav-item'>
-            <Link className='nav-link' to="/">Início</Link>
+        <ul className="navbar-nav mx-auto">
+          <li className="nav-item">
+            <Link className="nav-link" to="/">
+              Inicio
+            </Link>
           </li>
-          <li className='nav-item'>
-            <Link className='nav-link' to="/login">Login</Link>
+          <li className="nav-item">
+            <Link className="nav-link" to="/login">
+              Login
+            </Link>
           </li>
-          <li className='nav-item'>
-            <Link className='nav-link' to="/cadastro_aula">Cadastro de Aulas</Link>
+          <li className="nav-item">
+            <Link className="nav-link" to="/gestao_aulas">
+              Gestão Aulas
+            </Link>
           </li>
         </ul>
       </nav>

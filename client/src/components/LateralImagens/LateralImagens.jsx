@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
-import styles from './LateralImagens.module.css'
-import Loading
- from '../layout/Loading';
+import styles from './LateralImagens.module.css';
+import Loading from '../layout/Loading';
+
 function LateralImagens() {
-  const [imagens, seImagens] = useState([]);
-  const [removeLoading ,setRemoveLoading] = useState(false);
+  const [imagens, setImagens] = useState([]);
+  const [removeLoading, setRemoveLoading] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       carregarImagens();
-    }, 3000);
-    
+    },300)
   }, []);
 
   async function carregarImagens() {
@@ -22,13 +21,13 @@ function LateralImagens() {
         },
       });
       if (!resposta) {
-        throw new Error('Erro ao buscar imagens');
+        throw new Error('Erro ao buscar aulas');
       }
       const consulta = await resposta.json();
-      seImagens(consulta);
-      setRemoveLoading(true)
+      setImagens(consulta);
+      setRemoveLoading(true);
     } catch (error) {
-      console.log('Erro ao consultar imagens', error);
+      console.log('Error ao consultar aulas', error);
     }
   }
 
@@ -39,8 +38,7 @@ function LateralImagens() {
           <img src={imagem.caminho} alt={imagem.alt} />
         </div>
       ))}
-      {!removeLoading && <Loading/>}
-      {removeLoading && imagens.length === 0 && <h1>Não há aulas disponíveis</h1>}
+      {!removeLoading && <Loading />}
     </div>
   );
 }
