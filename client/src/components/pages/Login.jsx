@@ -5,7 +5,7 @@ function Login() {
   return (
     <div>
       <Navbar />
-      <h1>Efetue Login</h1>
+      <h1 className="titulo">Efetue Login</h1>
     </div>
   );
 }

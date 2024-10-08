@@ -1,10 +1,13 @@
-.saudacao {
-  display: inline-block;
-  width: 90%;
+.saudacao{
+    display: inline-block;
+    width: 90%;
 }
 
-@media(max-width: 768px) {
-  .saudacao {
-      width: 100%;
-  }
+@media(max-width:768px){
+    .saudacao{
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+        font-weight: bold;
+    }
 }

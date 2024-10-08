@@ -1,6 +1,10 @@
-function AbreviaInstrutor({ instrutor }) {
-  const nomes = instrutor.split(' ');
-  return `${nomes[0]} ${nomes[nomes.length - 1]}`; // Exibe o primeiro e o último nome
+function AbreviaInstrutor(props) {
+  const nomes = props.nomeCompleto.split(' ');
+
+  if (nomes.length === 1) {
+    return nomes[0];
+  }
+  return nomes[0] + ' ' + nomes.pop();
 }
 
 export default AbreviaInstrutor;

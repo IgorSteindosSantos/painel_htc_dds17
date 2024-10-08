@@ -1,8 +1,15 @@
-.cabecalho {
-  background-color: #26a9e1;
-  color: white;
-  font-size: 48px;
-  padding: 10px 100px;
-  border-radius: 8px;
-  margin-bottom: 8px;
+.cabecalho{
+    background-color: #26a9e1;
+    color: white;
+    font-size: 48px;
+    padding: 10px 100px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+@media(max-width:768px){
+    .cabecalho{
+        width: 100%;
+        padding: 0;
+    }
 }

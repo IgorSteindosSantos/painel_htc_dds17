@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ImportCSV() {
+function GestaoUsuarios() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function ImportCSV() {
   )
 }
 
-export default ImportCSV
+export default GestaoUsuarios

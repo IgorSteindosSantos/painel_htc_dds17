@@ -1,8 +1,8 @@
 .barra_navegacao a{
-    color: #fff;
+   color:#000; 
 }
 
-.barra_navegacao a:hover {
-    color: gold;
+.barra_navegacao a:hover{
+    color:#fff;
     transition: 0.5s;
 }
