@@ -7,7 +7,7 @@ import AbreviaUC from './AbreviaUC';
 import AbreviaAmbiente from './AbreviaAmbiente';
 import Loading from '../layout/Loading';
 
-function TabelaAulas({ tipo }) {
+function TabelaAulas({ tipo, onDeleteSuccess }) {
   const [aulas, setAulas] = useState([]);
   const [removeLoading, setRemoveLoading] = useState(false);
   useEffect(() => {
@@ -49,8 +49,9 @@ function TabelaAulas({ tipo }) {
         const error = await resposta.json();
         throw new Error('Erro ao Deleter Usuário', error);
       } else {
-        alert('Aula deletada com sucesso!');
+        // alert('Aula deletada com sucesso!');
         setAulas(aulas.filter((aula) => aula.id !== id));
+        onDeleteSuccess();
       }
     } catch (error) {
       throw new Error('Erro ao Deleter Usuário', error);
