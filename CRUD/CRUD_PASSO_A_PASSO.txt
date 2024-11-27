@@ -1,0 +1,94 @@
+Passo a Passo criando CRUD
+
+FRONTEND 
+1- Criando pasta
+Crie uma Pasta com o nome CRUD.
+dentro de CRUD crie duas novas paginas client e server (client para frontend e a server para o backend).
+
+2- Start projeto frontend
+Abra a pasta no vscode e acesse o client através do console para configurar o frontend (cd client/).
+No console dentro de client start o comando "npm create vite@latest" e siga o passo a passo abaixo.
+Passo a passo vite:
+ selecione e aperte enter.
+ 1- y (enter).
+ 2- name do project (coloque qualquer coisa ou só aperte enter).
+ 3- react (com a seta selecione e aperte enter).
+ 4- JavaScript (com a seta selecione e aperte enter).
+
+Criado uma pasta dentro de client(vite-project), agora só pegar tudo que ta dentro dessa pasta e colocar na pasta de client.
+Agora no console dentro de client start o comando "npm i" para instalar as bibliotecas
+e também um "npm i bootstrap" para usar a bliblioteca do bootstrap.
+Agora só da "npm run dev" para startar o projeto e visualizar no navegador.
+
+
+BACKEND
+1- Iniciando backend 
+Depois de configurar a pasta do frontend, abra um console novo e escreva "cd server/"
+para ir até a pasta do backend.
+Quando estiver dentro da pasta serve start o comando "npm init -y" no console.
+Logo após de instar as dependências, start no console o comando "npm i mysql2 express cors nodemon"  para instalar as bibliotecas que serão usadas.
+
+ATENÇÂO: não esqueça de ir em package.json e colocar o "type": "module" em baixo da main para funcionar a tipagem e colocar em "scripts" o seguinte comando "backend": "nodemon index.js" para funcionar o backend usando a biblioteca nodemon.
+
+2- Criando index.js
+Após ter instalado todas as dependências e as bibliotecas cria um arquivo no serve chamado index.js e passe o seguintes comandos dentro dela.
+
+COMANDOS:
+import cors from "cors";
+import express from "express";
+
+const app = express();
+const port = 5000;
+
+app.use(
+    cors({
+        origin: "http://localhost:5173",
+        methods: "GET,POST,PUT,DELETE", 
+    })
+);
+app.use(express.json());
+
+
+
+app.get("/", (req, res) => {
+    res.send("API funcionando");
+});
+  
+
+app.listen(port, () => {
+    console.log(`API funcionando na porta ${port}`);
+});
+
+Agora seu backend está funcionando, basta ir no console que esteja na pasta de serve
+e digitar o seguinte comando "npm run backend".
+
+3- Criando Conexão com o mysql
+Agora em serve crie outro arquivo com o nome de conexão e passe o seguinte código.
+
+import mysql from "mysql2/promise";
+
+const conexao = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'crud',
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+});
+
+export default conexao;
+
+nele você faz a conexão com o banco de dados, lembrando que a database que criar precisa te o nome da database que está sendo passada no código.
+
+3- Criando Pastas src
+Agora crie uma pasta com o nome src e dentro dela crie mais duas pastas uma com o nome de
+controllers e outra com models, delas você vai fazer as requisições ao banco.
+
+4- Requisições no frontend
+
+
+
+
+
+
