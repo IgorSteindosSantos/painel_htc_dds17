@@ -88,10 +88,18 @@ function Navbar(props) {
             </Button>
           </Box>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <Button sx={{ color: "#fff" }}>Cadastro de Tarefas</Button>
+            <Button sx={{ color: "#fff" }}
+              onClick={() => {
+                navigate("/register_tarefas");
+              }}
+            >Cadastro de Tarefas</Button>
           </Box>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <Button sx={{ color: "#fff" }}>Gerenciamento de Tarefas</Button>
+            <Button sx={{ color: "#fff" }}
+            onClick={() => {
+              navigate("/listar_tarefas");
+            }}
+            >Gerenciamento de Tarefas</Button>
           </Box>
         </Toolbar>
       </AppBar>

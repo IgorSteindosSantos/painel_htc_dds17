@@ -28,6 +28,8 @@ function User() {
 
     if (response.ok) {
       console.log("Usuário cadastrado com sucesso");
+      setEmail("");
+      setName("");
     } else {
       console.log("Erro ao cadastrar usuário ")
     }
@@ -38,7 +40,13 @@ function User() {
       <Toolbar />
       <Box
         component="main"
-        sx={{ width: "500px", overflow: "hidden", padding: "16px"}}
+        sx={{
+          width: "500px",
+          overflow: "hidden",
+          padding: "16px",
+          justifyContent: "center",
+          display: "flex"
+        }}
       >
         <Paper
           sx={{
@@ -46,6 +54,7 @@ function User() {
             overflow: "hidden",
             padding: "15px",
             boxShadow: "0px 0px 3px 0px rgba(0,0,0,0.50)",
+            
           }}
         >
           <Typography
@@ -86,7 +95,7 @@ function User() {
                   size="small"
                   fullWidth
                   onChange={(e) => setEmail(e.target.value)}
-                value={email}
+                  value={email}
                 />
               </div>
               <div

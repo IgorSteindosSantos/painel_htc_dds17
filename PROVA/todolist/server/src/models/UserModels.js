@@ -14,3 +14,12 @@ export async function postUser(req, res) {
     res.status(500).json({ error: "Erro ao cadastrar o usuário" });
   }
 }
+
+export async function  getUser(req, res) {
+  try {
+    const [rows] = await conexao.query("SELECT * FROM user");
+    res.status(200).json(rows);
+  } catch (error) {
+    res.status(500).json({ message: "Erro ao buscar usuários", error });
+  }
+}
